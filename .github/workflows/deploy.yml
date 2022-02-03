@@ -6,10 +6,13 @@ name: Github Pages deploy
 on: [push]
 
 jobs:
-  deploy:
+  build-and-test:
     runs-on: ubuntu-latest
+    container:
+      image: cypress/browsers:node16.13.0-chrome95-ff94
+      options: --user 1001
     steps:
-      - name: Checkout 🛎️
+      - name: Build
         uses: actions/checkout@v2
       - run: yarn
       - run: yarn build
