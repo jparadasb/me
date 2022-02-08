@@ -85,6 +85,7 @@ class App extends Component {
           disappearAfterEvent="keydown"
           keyNames={['ArrowDown']}
           icon={faArrowDown}
+          position={{x: 'center', y: 'bottom'}}
         />
       </div>
     );

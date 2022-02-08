@@ -1,0 +1,19 @@
+@keyframes flickering {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.1;
+  }
+}
+
+.base-press-key {
+  position: fixed;
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  gap: 12px;
+  animation-name: flickering;
+  animation-duration: 0.5s;
+  animation-iteration-count: 20;
+}
